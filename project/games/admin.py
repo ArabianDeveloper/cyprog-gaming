@@ -3,6 +3,6 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Game)
-admin.site.register(Images)
+admin.site.register(Image)
 admin.site.register(Type)
 

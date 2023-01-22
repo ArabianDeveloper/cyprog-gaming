@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Images(models.Model):
+class Image(models.Model):
     url = models.URLField(max_length=255)
 
     def __str__(self):
@@ -21,7 +21,7 @@ class Type(models.Model):
 class Game(models.Model):
     name = models.CharField(max_length=50)
     video = models.URLField(max_length=255)
-    images = models.ManyToManyField(Images)
+    images = models.ManyToManyField(Image)
     # downloaders
     rate = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True)
     type = models.ForeignKey(Type, on_delete=models.PROTECT, blank=True, null=True)
