@@ -14,9 +14,10 @@ def index(request):
 
 def details(request, id):
     game = get_object_or_404(Game, id = id)
+    images = Image.objects.filter(game = game)
     context = {
         'game' : game,
-        'images' : game.images,
+        'images' : images,
 
     }
     return render(request, 'pages/details.html', context)

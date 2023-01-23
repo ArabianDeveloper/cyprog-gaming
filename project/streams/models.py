@@ -9,10 +9,6 @@ class Type(models.Model):
         return self.name
 
 class Stream(models.Model):
-    STATUS = [
-        {'Live' : 'Live'},
-        {'Finished' : 'Finished'}
-    ]
 
 
     title = models.CharField(max_length=50)
@@ -20,7 +16,7 @@ class Stream(models.Model):
     image = models.URLField(max_length=255)
     type = models.ForeignKey(Type, on_delete=models.CASCADE)
     # viewers = models.ManyToManyField(User)
-    # status = models.Choices(STATUS)
+    status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
