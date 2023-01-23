@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from .views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('games.urls', namespace='games')),
@@ -23,3 +25,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls', namespace='accounts')),
 
 ]
+
+
+handler404 = 'project.views.handel404'
+handler500 = 'project.views.handel500'
