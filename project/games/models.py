@@ -21,7 +21,8 @@ class Type(models.Model):
 class Game(models.Model):
     name = models.CharField(max_length=50)
     video = models.URLField(max_length=255)
-    images = models.ManyToManyField(Image)
+    images = models.ManyToManyField(Image, related_name='images')
+    mimage = models.ForeignKey(Image, on_delete=models.CASCADE, related_name='mimage')
     # downloaders = models.ManyToManyField(User)
     rate = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True)
     type = models.ForeignKey(Type, on_delete=models.PROTECT, blank=True, null=True)

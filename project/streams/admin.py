@@ -3,4 +3,4 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Type)
-admin.site.register(stream)
+admin.site.register(Stream)
