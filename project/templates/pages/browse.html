@@ -22,7 +22,7 @@
                   {% for game in games %}
                     <div class="item">
                       <div class="thumb">
-                        <img src="{% static 'assets/images/featured-01.jpg' %}" alt="">
+                        <img src="{{game.mimage}}" alt="">
                         <div class="hover-effect">
                           <h6>2.4K Streaming</h6>
                         </div>
@@ -47,7 +47,7 @@
                   
                   {% for game in games %}
                     <li>
-                      <img src="{% static 'assets/images/game-01.jpg' %}" alt="" class="templatemo-item">
+                      <img src="{{game.mimage}}" alt="" class="templatemo-item">
                       <h4>{{game.name}}</h4>
                       <h6>Sandbox</h6>
                       <span><i class="fa fa-star" style="color: yellow;"></i> {{game.rate}}</span>
