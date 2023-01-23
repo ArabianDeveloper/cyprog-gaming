@@ -10,10 +10,10 @@ class Type(models.Model):
 
 class stream(models.Model):
     title = models.CharField(max_length=50)
-    # streamer = models.ForeignKey()
+    # streamer = models.OneToOneField(User, on_delete=models.PROTECT)
     image = models.URLField(max_length=255)
     type = models.ForeignKey(Type, on_delete=models.CASCADE)
-    # viewers = models.ManyToManyField()
+    # viewers = models.ManyToManyField(User)
 
 
     def __str__(self):
