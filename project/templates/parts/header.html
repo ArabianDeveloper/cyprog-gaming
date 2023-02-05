@@ -33,10 +33,13 @@
                 <!-- ***** Search End ***** -->
                 <!-- ***** Menu Start ***** -->
                 <ul class="nav">
-                    <li><a href="{% url 'games:index' %}" class="active">Home</a></li>
+                    <li><a href="{% url 'games:index' %}">Home</a></li>
+
                     <li><a href="{% url 'games:browse' %}">Browse</a></li>
+
                     <li><a href="{% url 'streams:streams' %}">Streams</a></li>
-                    <li><a href="{% url 'accounts:profile' %}">Profile <img src="{% static 'assets/images/profile-header.jpg' %}" alt=""></a></li>
+
+                    <li><a href="{% url 'accounts:profile' %}">Profile <img src="{% static 'assets/images/profile-header.jpg' %}" alt=""></a></li>                    
                 </ul>   
                 <a class='menu-trigger'>
                     <span>Menu</span>
