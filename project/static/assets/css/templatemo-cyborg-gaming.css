@@ -1107,7 +1107,7 @@ Featured Games Style
 .top-downloaded ul li .download i {
   position: absolute;
   right: 0;
-  top: 30%;
+  top: 50%;
   transform: translateY(-23px);
   width: 46px;
   height: 46px;

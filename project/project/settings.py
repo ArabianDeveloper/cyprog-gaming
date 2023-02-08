@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9+24fvv*31_^d*r18o6f@p3!2#35&lepeh83zr63@x$zmdi&4-'
+SECRET_KEY = 'django-insecure-j(xrbn(n+4_9ax=^yhgovp^ejp6s5!c9*(_u8#b+%!#h$5&d69'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,8 +41,7 @@ INSTALLED_APPS = [
 
     # My apps
     'games',
-    'streams',
-    'accounts',
+    'streams'
 ]
 
 MIDDLEWARE = [
@@ -120,11 +119,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'project/static')
 ]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
